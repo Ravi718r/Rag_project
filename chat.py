@@ -32,6 +32,7 @@ def chat(
             vectorstore,
             bm25,
             documents,
+            generation_chain,
             query
         )
         # docs = retrieve_documents(

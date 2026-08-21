@@ -1,0 +1,97 @@
+[
+    {
+        "question": "What is the primary focus of Google LLC?",
+        "ground_truth": "online advertising",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "Which of the five Big Tech companies is Google's parent company?",
+        "ground_truth": "Alphabet Inc.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What percentage of publicly listed shares does Larry Page and Sergey Brin own together?",
+        "ground_truth": "14%",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What was the name of Google before it became a subsidiary of Alphabet Inc.",
+        "ground_truth": "Formerly Google Inc.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What is Sundar Pichai's role in Google?",
+        "ground_truth": "CEO",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "When was Google founded?",
+        "ground_truth": "September 4, 1998",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What type of service is YouTube?",
+        "ground_truth": "video sharing",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "Where is the headquarters of Google located?",
+        "ground_truth": "Googleplex, Mountain View,",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What is the primary device used for both smartphones and wearable technology?",
+        "ground_truth": "Pixel",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What is the name of the CEO of Google Cloud",
+        "ground_truth": "Thomas Kurian",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What is one of the non-Android ventures of Google?",
+        "ground_truth": "Nest",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What are some of the organizations that have contributed to the development of transformer models?",
+        "ground_truth": "[\"Waymo\", \"smart cities (Sidewalk Labs)\", \"Google DeepMind\"]",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What is the name of Twitter after it was rebranded?",
+        "ground_truth": "X",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What is the name of the company that provides photo and cloud storage services?",
+        "ground_truth": "Parent Alphabet Inc.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What was the year when Google began as a research project?",
+        "ground_truth": "1996",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "Who was the original lead programmer for the Google Search engine?",
+        "ground_truth": "Scott Hassan",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What year did Hassan found the company Willow Garage?",
+        "ground_truth": "2006",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What is the basis for determining a website's relevance in the PageRank algorithm?",
+        "ground_truth": "the number of pages that link back to it",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "Where did Page and Brin initially set up their office for the search engine?",
+        "ground_truth": "Susan Wojcicki's garage",
+        "source": "docs\\Google.txt"
+    }
+]

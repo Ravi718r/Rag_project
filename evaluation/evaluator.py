@@ -31,3 +31,45 @@ def context_recall(
         len(matched_words)
         / len(ground_truth_words)
     )
+
+
+def context_precision(
+    question,
+    retrieved_context,
+    ground_truth
+):
+    """
+    Simple Context Precision implementation.
+
+    Measures how many retrieved chunks
+    contain information relevant to the
+    ground-truth answer.
+    """
+
+    if not retrieved_context:
+        return 0.0
+
+    ground_truth_words = set(
+        ground_truth.lower().split()
+    )
+
+    relevant_chunks = 0
+
+    for chunk in retrieved_context:
+
+        chunk_words = set(
+            chunk.lower().split()
+        )
+
+        overlap = (
+            ground_truth_words
+            & chunk_words
+        )
+
+        if overlap:
+            relevant_chunks += 1
+
+    return (
+        relevant_chunks
+        / len(retrieved_context)
+    )

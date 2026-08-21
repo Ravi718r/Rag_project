@@ -48,7 +48,7 @@ Document:
 parser = StrOutputParser()
 
 
-generation_chain = (
+synthetic_generation_chain = (
     PROMPT
     | llm
     | parser
@@ -57,7 +57,7 @@ generation_chain = (
 
 def generate_question(document):
 
-    response = generation_chain.invoke(
+    response = synthetic_generation_chain.invoke(
         {
             "document": document.page_content
         }
@@ -153,14 +153,14 @@ def create_synthetic_dataset(
 
 if __name__ == "__main__":
 
-    from rag_setup import initialize_rag
+    from ingestion_pipeline import load_document
+    from ingestion_pipeline import split_documents
 
-    (
-        vectorstore,
-        bm25,
-        documents,
-        generation_chain
-    ) = initialize_rag()
+    documents = load_document()
+
+    documents = split_documents(
+        documents
+    )
 
     create_synthetic_dataset(
         documents[:20]

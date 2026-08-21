@@ -1,8 +1,12 @@
 import json
 
-from evaluation.evaluator import context_recall
+from evaluation.evaluator import (
+    context_recall, 
+    context_precision
+    )
 from rag_pipeline import run_rag
 from rag_setup import initialize_rag
+
 
 
 # =========================
@@ -75,6 +79,12 @@ def evaluate(
             result["retrieved_context"]
         )
 
+        precision = context_precision(
+            question,
+            result["retrieved_context"],
+            ground_truth
+        )
+
         # -------------------------
         # Store Result
         # -------------------------
@@ -96,6 +106,9 @@ def evaluate(
 
             "context_recall":
                 recall,
+
+            "context_precision":
+                precision,
 
             "source":
                 item.get(
@@ -185,6 +198,11 @@ if __name__ == "__main__":
         print(
             f"\nContext Recall: "
             f"{result['context_recall']:.2f}"
+        )
+
+        print(
+            f"Context Precision: "
+            f"{result['context_precision']:.2f}"
         )
 
         print(

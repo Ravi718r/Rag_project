@@ -74,10 +74,10 @@ def retrieve_documents(
         docs
     )
     
-    print("\n===== BEFORE COMPRESSION =====")
+    # print("\n===== BEFORE COMPRESSION =====")
     
-    for doc in reranked_docs:
-        print("\n", doc.page_content)
+    # for doc in reranked_docs:
+    #     print("\n", doc.page_content)
 
     # =========================
     # Compression
@@ -88,10 +88,10 @@ def retrieve_documents(
     )
 
     
-    print("\n===== AFTER COMPRESSION =====")
+    # print("\n===== AFTER COMPRESSION =====")
     
-    for doc in compressed_docs:
-        print("\n", doc.page_content)
+    # for doc in compressed_docs:
+    #     print("\n", doc.page_content)
 
     if not compressed_docs:
         return None
