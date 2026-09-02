@@ -1,0 +1,232 @@
+{
+    "summary": {
+        "total_questions": 19,
+        "metrics": {
+            "context_recall": 0.5556,
+            "context_precision": 0.5,
+            "faithfulness": 0.4583,
+            "answer_relevancy": 0.5
+        },
+        "failures": {
+            "retrieval_failures": 3,
+            "generation_failures": 15,
+            "completely_failed": 3
+        }
+    },
+    "failures": [
+        {
+            "question": "What is the primary focus of Google LLC?",
+            "ground_truth": "online advertising",
+            "answer": "The primary focus of Google LLC is not explicitly stated in the provided context. However, based on the information provided, it can be inferred that Google LLC focuses on a range of areas, including online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, consumer electronics, and artificial intelligence (AI).\n\nA more accurate answer would be: \"I don't know\" as the context does not explicitly state the primary focus of Google LLC.",
+            "problems": [
+                "low_faithfulness",
+                "low_answer_relevancy"
+            ],
+            "context_recall": 1.0,
+            "context_precision": 0.6666666666666666,
+            "faithfulness": 0.3333333333333333,
+            "answer_relevancy": 0.0
+        },
+        {
+            "question": "What percentage of publicly listed shares does Larry Page and Sergey Brin own together?",
+            "ground_truth": "14%",
+            "answer": "Larry Page and Sergey Brin own 14% of Google's publicly listed shares together.",
+            "problems": [
+                "low_context_precision",
+                "low_faithfulness",
+                "low_answer_relevancy"
+            ],
+            "context_recall": 1.0,
+            "context_precision": 0.3333333333333333,
+            "faithfulness": 0.0,
+            "answer_relevancy": 0.0
+        },
+        {
+            "question": "What was the name of Google before it became a subsidiary of Alphabet Inc.",
+            "ground_truth": "Formerly Google Inc.",
+            "answer": "I don't know.",
+            "problems": [
+                "low_faithfulness",
+                "low_answer_relevancy"
+            ],
+            "context_recall": 0.6666666666666666,
+            "context_precision": 0.6666666666666666,
+            "faithfulness": 0.0,
+            "answer_relevancy": 0.0
+        },
+        {
+            "question": "What is Sundar Pichai's role in Google?",
+            "ground_truth": "CEO",
+            "answer": "Sundar Pichai is the CEO of Google.",
+            "problems": [
+                "low_answer_relevancy"
+            ],
+            "context_recall": 1.0,
+            "context_precision": 0.6666666666666666,
+            "faithfulness": 0.5,
+            "answer_relevancy": 0.0
+        },
+        {
+            "question": "When was Google founded?",
+            "ground_truth": "September 4, 1998",
+            "answer": "I don't know.",
+            "problems": [
+                "low_context_precision",
+                "low_faithfulness",
+                "low_answer_relevancy"
+            ],
+            "context_recall": 1.0,
+            "context_precision": 0.3333333333333333,
+            "faithfulness": 0.0,
+            "answer_relevancy": 0.0
+        },
+        {
+            "question": "What type of service is YouTube?",
+            "ground_truth": "video sharing",
+            "answer": "YouTube is a video-sharing service.",
+            "problems": [
+                "low_context_precision"
+            ],
+            "context_recall": 1.0,
+            "context_precision": 0.3333333333333333,
+            "faithfulness": 1.0,
+            "answer_relevancy": 1.0
+        },
+        {
+            "question": "What is the primary device used for both smartphones and wearable technology?",
+            "ground_truth": "Pixel",
+            "answer": "I don't know.",
+            "problems": [
+                "low_context_precision",
+                "low_faithfulness",
+                "low_answer_relevancy"
+            ],
+            "context_recall": 1.0,
+            "context_precision": 0.0,
+            "faithfulness": 0.0,
+            "answer_relevancy": 0.0
+        },
+        {
+            "question": "What is the name of the CEO of Google Cloud",
+            "ground_truth": "Thomas Kurian",
+            "answer": "I don't know.",
+            "problems": [
+                "low_context_recall",
+                "low_context_precision",
+                "low_faithfulness",
+                "low_answer_relevancy"
+            ],
+            "context_recall": 0.0,
+            "context_precision": 0.0,
+            "faithfulness": 0.0,
+            "answer_relevancy": 0.0
+        },
+        {
+            "question": "What is one of the non-Android ventures of Google?",
+            "ground_truth": "Nest",
+            "answer": "One of Google's non-Android ventures is Nest.",
+            "problems": [
+                "low_context_precision",
+                "low_answer_relevancy"
+            ],
+            "context_recall": 1.0,
+            "context_precision": 0.3333333333333333,
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.0
+        },
+        {
+            "question": "What are some of the organizations that have contributed to the development of transformer models?",
+            "ground_truth": "[\"Waymo\", \"smart cities (Sidewalk Labs)\", \"Google DeepMind\"]",
+            "answer": "I don't know.",
+            "problems": [
+                "low_context_recall",
+                "low_context_precision",
+                "low_faithfulness",
+                "low_answer_relevancy"
+            ],
+            "context_recall": 0.0,
+            "context_precision": 0.0,
+            "faithfulness": 0.0,
+            "answer_relevancy": 0.0
+        },
+        {
+            "question": "What is the name of Twitter after it was rebranded?",
+            "ground_truth": "X",
+            "answer": "I don't know.",
+            "problems": [
+                "low_context_recall",
+                "low_context_precision",
+                "low_faithfulness",
+                "low_answer_relevancy"
+            ],
+            "context_recall": 0.0,
+            "context_precision": 0.0,
+            "faithfulness": 0.0,
+            "answer_relevancy": 0.0
+        },
+        {
+            "question": "What is the name of the company that provides photo and cloud storage services?",
+            "ground_truth": "Parent Alphabet Inc.",
+            "answer": "I don't know.",
+            "problems": [
+                "low_context_precision",
+                "low_faithfulness",
+                "low_answer_relevancy"
+            ],
+            "context_recall": 1.0,
+            "context_precision": 0.3333333333333333,
+            "faithfulness": 0.0,
+            "answer_relevancy": 0.0
+        },
+        {
+            "question": "What was the year when Google began as a research project?",
+            "ground_truth": "1996",
+            "answer": "1996",
+            "problems": [
+                "low_context_precision",
+                "low_faithfulness"
+            ],
+            "context_recall": 1.0,
+            "context_precision": 0.3333333333333333,
+            "faithfulness": 0.0,
+            "answer_relevancy": 1.0
+        },
+        {
+            "question": "Who was the original lead programmer for the Google Search engine?",
+            "ground_truth": "Scott Hassan",
+            "answer": "Scott Hassan.",
+            "problems": [
+                "low_answer_relevancy"
+            ],
+            "context_recall": 1.0,
+            "context_precision": 0.6666666666666666,
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.0
+        },
+        {
+            "question": "What year did Hassan found the company Willow Garage?",
+            "ground_truth": "2006",
+            "answer": "2006.",
+            "problems": [
+                "low_context_precision",
+                "low_faithfulness"
+            ],
+            "context_recall": 1.0,
+            "context_precision": 0.0,
+            "faithfulness": 0.3333333333333333,
+            "answer_relevancy": 1.0
+        },
+        {
+            "question": "What is the basis for determining a website's relevance in the PageRank algorithm?",
+            "ground_truth": "the number of pages that link back to it",
+            "answer": "I don't know.",
+            "problems": [
+                "low_answer_relevancy"
+            ],
+            "context_recall": 1.0,
+            "context_precision": 1.0,
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.0
+        }
+    ]
+}

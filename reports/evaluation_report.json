@@ -1,0 +1,541 @@
+[
+    {
+        "question": "What is the primary focus of Google LLC?",
+        "ground_truth": "online advertising",
+        "retrieved_context": [
+            "﻿Google\nGoogle LLC (/ˈɡuːɡəl/ ⓘ , GOO-gəl) is an Google LLC\nAmerican multinational corporation and technology\ncompany focusing on online advertising, search engine\ntechnology, cloud computing, computer software,\nquantum computing, e-commerce, consumer\nelectronics, and artificial intelligence (AI).[9] It has\nbeen referred to as \"the most powerful company in the The Google logo used since 2015\nworld\" by the BBC[10] and is one of the world's most\nvaluable brands.[11][12][13] Google's parent company,\nAlphabet Inc., is one of the five Big Tech companies\nalongside Amazon, Apple, Meta, and Microsoft.",
+            "﻿Google\nGoogle LLC (/ˈɡuːɡəl/ ⓘ , GOO-gəl) is an Google LLC\nAmerican multinational corporation and technology\ncompany focusing on online advertising, search engine\ntechnology, cloud computing, computer software,\nquantum computing, e-commerce, consumer\nelectronics, and artificial intelligence (AI).[9] It has\nbeen referred to as \"the most powerful company in the The Google logo used since 2015",
+            "Web-based services\nGoogle offers Gmail for email,[169] Google Calendar for time-management and scheduling,[170] Google\nMaps and Google Earth for mapping, navigation and satellite imagery,[171] Google Drive for cloud\nstorage of files,[172] Google Docs, Sheets and Slides for productivity,[172] Google Photos for photo\nstorage and sharing,[173] Google Keep for note-taking,[174] Google Translate for language translation,[175]\n\nYouTube for video viewing and sharing,[176] Google My Business for managing public business\ninformation,[177] Google Classroom for managing assignments and communication in education,[178] and\nDuo for social interaction.[179] A job search product has also existed since before 2017,[180][181][182]"
+        ],
+        "compressed_context": [
+            "Google LLC is an American multinational corporation and technology company focusing on online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, consumer electronics, and artificial intelligence (AI).",
+            "Google LLC is an American multinational corporation and technology company.",
+            "Google LLC offers a range of web-based services, including:\n\n* Gmail for email\n* Google Calendar for time-management and scheduling\n* Google Maps and Google Earth for mapping, navigation and satellite imagery\n* Google Drive for cloud storage of files\n* Google Docs, Sheets and Slides for productivity\n* Google Photos for photo storage and sharing\n* Google Keep for note-taking\n* Google Translate for language translation\n* YouTube for video viewing and sharing\n* Google My Business for managing public business information\n* Google Classroom for managing assignments and communication in education\n* Duo for social interaction"
+        ],
+        "answer": "The primary focus of Google LLC is not explicitly stated in the provided context. However, based on the information provided, it can be inferred that Google LLC focuses on a range of areas, including online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, consumer electronics, and artificial intelligence (AI).\n\nA more accurate answer would be: \"I don't know\" as the context does not explicitly state the primary focus of Google LLC.",
+        "context_recall": 1.0,
+        "context_precision": 0.6666666666666666,
+        "faithfulness": 0.3333333333333333,
+        "faithfulness_claims": [
+            {
+                "claim": "The primary focus of Google LLC is not explicitly stated in the provided context.",
+                "supported": false
+            },
+            {
+                "claim": "However, based on the information provided, it can be inferred that Google LLC focuses on a range of areas, including online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, consumer electronics, and artificial intelligence (AI).",
+                "supported": true
+            },
+            {
+                "claim": "A more accurate answer would be: \"I don't know\" as the context does not explicitly state the primary focus of Google LLC.",
+                "supported": false
+            }
+        ],
+        "answer_relevancy": 0.0,
+        "answer_relevancy_reason": "The answer does not directly address the user's question as it does not provide a clear and concise answer to what the primary focus of Google LLC is.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "Which of the five Big Tech companies is Google's parent company?",
+        "ground_truth": "Alphabet Inc.",
+        "retrieved_context": [
+            "﻿Google\nGoogle LLC (/ˈɡuːɡəl/ ⓘ , GOO-gəl) is an Google LLC\nAmerican multinational corporation and technology\ncompany focusing on online advertising, search engine\ntechnology, cloud computing, computer software,\nquantum computing, e-commerce, consumer\nelectronics, and artificial intelligence (AI).[9] It has\nbeen referred to as \"the most powerful company in the The Google logo used since 2015\nworld\" by the BBC[10] and is one of the world's most\nvaluable brands.[11][12][13] Google's parent company,\nAlphabet Inc., is one of the five Big Tech companies\nalongside Amazon, Apple, Meta, and Microsoft.",
+            "world\" by the BBC[10] and is one of the world's most\nvaluable brands.[11][12][13] Google's parent company,\nAlphabet Inc., is one of the five Big Tech companies\nalongside Amazon, Apple, Meta, and Microsoft.",
+            "According to Interbrand's annual Best Global Brands report, Google\nhas been the second most valuable brand in the world (behind Apple\nInc.) in 2013,[95] 2014,[96] 2015,[97] and 2016, with a valuation of $133\nbillion.[98] Entrance of building where\n\nGoogle and its subsidiary Deep\n\nOn August 10, 2015, Google announced plans to reorganize its various Mind are located at 6 Pancras"
+        ],
+        "compressed_context": [
+            "Alphabet Inc. is Google's parent company.",
+            "Alphabet Inc. is Google's parent company."
+        ],
+        "answer": "Alphabet Inc.",
+        "context_recall": 1.0,
+        "context_precision": 0.6666666666666666,
+        "faithfulness": 1.0,
+        "faithfulness_claims": [
+            {
+                "claim": "Alphabet Inc. is Google's parent company.",
+                "supported": true
+            },
+            {
+                "claim": "Alphabet Inc. is Google's parent company.",
+                "supported": true
+            }
+        ],
+        "answer_relevancy": 1.0,
+        "answer_relevancy_reason": "The answer directly addresses the user's question by providing the name of Google's parent company.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What percentage of publicly listed shares does Larry Page and Sergey Brin own together?",
+        "ground_truth": "14%",
+        "retrieved_context": [
+            "Google was founded on September 4, 1998, by\nAmerican computer scientists Larry Page and Sergey\nBrin. Together, they own about 14% of its publicly\nlisted shares and control 56% of its stockholder voting\npower through super-voting stock. The company went\npublic via an initial public offering (IPO) in 2004. In Google's headquarters, the Googleplex\n2015, Google was reorganized as a wholly owned",
+            "Initial public offering\nOn August 19, 2004, Google became a public company via an initial public offering. At that time Page,\nBrin and Schmidt agreed to work together at Google for 20 years, until the year 2024.[67] The company\nopened on the NASDAQ National Market under the ticker symbol GOOGL with an offering of\n19,605,052 shares at a price of $85 per share.[68][69] Shares were sold in an online auction format using a\nsystem built by Morgan Stanley and Credit Suisse, underwriters for the deal.[70][71] The sale of $1.67\nbillion gave Google a market capitalization of more than $23 billion.[72]",
+            "Then Chairman and CEO Eric Schmidt\n\nPage and Brin originally nicknamed the new search engine (left) with co-founders Sergey Brin\n(center) and Larry Page (right) in 2008"
+        ],
+        "compressed_context": [
+            "Larry Page and Sergey Brin own 14% of Google's publicly listed shares."
+        ],
+        "answer": "Larry Page and Sergey Brin own 14% of Google's publicly listed shares together.",
+        "context_recall": 1.0,
+        "context_precision": 0.3333333333333333,
+        "faithfulness": 0.0,
+        "faithfulness_claims": [
+            {
+                "claim": "Larry Page and Sergey Brin own 14% of Google's publicly listed shares together.",
+                "supported": false
+            }
+        ],
+        "answer_relevancy": 0.0,
+        "answer_relevancy_reason": "Invalid evaluator response.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What was the name of Google before it became a subsidiary of Alphabet Inc.",
+        "ground_truth": "Formerly Google Inc.",
+        "retrieved_context": [
+            "Google and its subsidiary Deep\n\nOn August 10, 2015, Google announced plans to reorganize its various Mind are located at 6 Pancras\n\ninterests as a conglomerate named Alphabet Inc. Google became Square, London\n\nAlphabet's largest subsidiary and the umbrella company for Alphabet's\nInternet interests. Upon completion of the restructuring, Sundar Pichai became CEO of Google, replacing\nLarry Page, who became CEO of Alphabet.[99][100][101]",
+            "interests as a conglomerate named Alphabet Inc. Google became Square, London\n\nAlphabet's largest subsidiary and the umbrella company for Alphabet's\nInternet interests. Upon completion of the restructuring, Sundar Pichai became CEO of Google, replacing\nLarry Page, who became CEO of Alphabet.[99][100][101]",
+            "Eventually, they changed the name to Google; the name of the search engine was a misspelling of the\nword googol,[23][39][40] a very large number written 10100 (1 followed by 100 zeros), picked to signify\nthat the search engine was intended to provide large quantities of information.[41]"
+        ],
+        "compressed_context": [
+            "Google was previously known as Alphabet Inc. before it became a subsidiary of itself.",
+            "Google",
+            "Google"
+        ],
+        "answer": "I don't know.",
+        "context_recall": 0.6666666666666666,
+        "context_precision": 0.6666666666666666,
+        "faithfulness": 0.0,
+        "faithfulness_claims": [
+            {
+                "claim": "Google was previously known as Alphabet Inc. before it became a subsidiary of itself.",
+                "supported": false
+            }
+        ],
+        "answer_relevancy": 0.0,
+        "answer_relevancy_reason": "The answer does not answer the question because it does not provide any information about the name of Google before it became a subsidiary of Alphabet Inc.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What is Sundar Pichai's role in Google?",
+        "ground_truth": "CEO",
+        "retrieved_context": [
+            "Industry\nAlphabet. On December 3, 2019, Pichai also became Internet\n\nthe CEO of Alphabet.[14] Cloud computing\nComputer software\n\nAfter the success of its original service, Google Search Computer hardware\n(often known simply as \"Google\"), the company has Artificial intelligence\nrapidly grown to offer a multitude of products and Advertising\nservices. These products address a wide range of use Founded September 4, 1998[a] in\ncases, including email (Gmail), navigation and Menlo Park, California,\nmapping (Waze, Maps, and Earth), cloud computing United States\n(Cloud), web navigation (Chrome), video sharing Founders Larry Page\n(YouTube), productivity (Workspace), operating",
+            "largest subsidiary and is a holding company for Company type Subsidiary\nAlphabet's internet properties and interests. Sundar Traded as Nasdaq: GOOGL\nPichai was appointed CEO of Google on October 24, Nasdaq: GOOG\n2015, replacing Larry Page, who became the CEO of\n\nIndustry\nAlphabet. On December 3, 2019, Pichai also became Internet\n\nthe CEO of Alphabet.[14] Cloud computing\nComputer software",
+            "In December 2019, former PayPal chief operating officer Bill Ready became Google's new commerce\nchief. Ready's role will not be directly involved with Google Pay.[115]"
+        ],
+        "compressed_context": [
+            "Sundar Pichai is the CEO of Alphabet.",
+            "Sundar Pichai is the CEO of Google.",
+            "[]"
+        ],
+        "answer": "Sundar Pichai is the CEO of Google.",
+        "context_recall": 1.0,
+        "context_precision": 0.6666666666666666,
+        "faithfulness": 0.5,
+        "faithfulness_claims": [
+            {
+                "claim": "Sundar Pichai is the CEO of Alphabet.",
+                "supported": false
+            },
+            {
+                "claim": "Sundar Pichai is the CEO of Google.",
+                "supported": true
+            }
+        ],
+        "answer_relevancy": 0.0,
+        "answer_relevancy_reason": "Invalid evaluator response.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "When was Google founded?",
+        "ground_truth": "September 4, 1998",
+        "retrieved_context": [
+            "Google was founded on September 4, 1998, by\nAmerican computer scientists Larry Page and Sergey\nBrin. Together, they own about 14% of its publicly\nlisted shares and control 56% of its stockholder voting\npower through super-voting stock. The company went\npublic via an initial public offering (IPO) in 2004. In Google's headquarters, the Googleplex\n2015, Google was reorganized as a wholly owned",
+            "the importance of those pages that linked back to the original\nsite.[32][31] Page told his ideas to Hassan, who began writing\nthe code to implement Page's ideas.[26] Page and Brin would\nalso use their friend Susan Wojcicki's garage as their office\nwhen the search engine was set up in 1998.[33]",
+            "Larry Page and Sergey Brin in 2003 Stanford University in California, USA.[23][24][25] The project\ninitially involved an unofficial \"third founder\", Scott Hassan,\nthe original lead programmer who wrote much of the code for\n\nthe original Google Search engine, but he left before Google was officially founded as a company;[26][27]"
+        ],
+        "compressed_context": [
+            "Google was founded on September 4, 1998, by Larry Page and Sergey Brin.",
+            "[]",
+            "Google was founded in 2003."
+        ],
+        "answer": "I don't know.",
+        "context_recall": 1.0,
+        "context_precision": 0.3333333333333333,
+        "faithfulness": 0.0,
+        "faithfulness_claims": [
+            {
+                "claim": "Google was founded in 2003",
+                "supported": false
+            }
+        ],
+        "answer_relevancy": 0.0,
+        "answer_relevancy_reason": "Invalid evaluator response.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What type of service is YouTube?",
+        "ground_truth": "video sharing",
+        "retrieved_context": [
+            "YouTube for video viewing and sharing,[176] Google My Business for managing public business\ninformation,[177] Google Classroom for managing assignments and communication in education,[178] and\nDuo for social interaction.[179] A job search product has also existed since before 2017,[180][181][182]",
+            "hVJJzQIHcFXB-kQyM8BCCgwAQ%26usg%3DAOvVaw0HFBmVnTnarPXLRK7ok2jE%26a\nmpcf%3D1). www.techradar.com. December 14, 2020. Archived from the original (https://ww\nw.techradar.com/news/google-suite-youtube-and-other-services-are-down) on December\n14, 2020. Retrieved February 23, 2022.",
+            "Vehicle servicing\nTesla's strategy is to service its vehicles first through remote diagnosis and repair. If it is not possible to resolve a problem\nremotely, a mobile technician is dispatched or customers are referred to a local Tesla-owned service center.[126][127] As of\nOctober 2024, the company operates 1,306 retail stores, galleries, service, delivery and body shop locations globally.[128]"
+        ],
+        "compressed_context": [
+            "YouTube for video viewing and sharing.",
+            "YouTube is a video-sharing service."
+        ],
+        "answer": "YouTube is a video-sharing service.",
+        "context_recall": 1.0,
+        "context_precision": 0.3333333333333333,
+        "faithfulness": 1.0,
+        "faithfulness_claims": [
+            {
+                "claim": "YouTube is a video-sharing service.",
+                "supported": true
+            }
+        ],
+        "answer_relevancy": 1.0,
+        "answer_relevancy_reason": "The answer directly addresses the user's question about the type of service YouTube is.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "Where is the headquarters of Google located?",
+        "ground_truth": "Googleplex, Mountain View,",
+        "retrieved_context": [
+            "world\" by the BBC[10] and is one of the world's most\nvaluable brands.[11][12][13] Google's parent company,\nAlphabet Inc., is one of the five Big Tech companies\nalongside Amazon, Apple, Meta, and Microsoft.",
+            "Office locations\nGoogle's headquarters in Mountain View, California is\nreferred to as \"the Googleplex\", a play on words on the\nnumber googolplex and the headquarters itself being a\ncomplex of buildings. Internationally, Google has over 78\noffices in more than 50 countries.[285]",
+            "In 2021, court documents revealed that between 2018 and 2020, Google ran an anti-union campaign\ncalled Project Vivian to \"convince them (employees) that unions suck\".[283]\n\nIn February 2025, Google dropped their commitment to make \"diversity, equity, and inclusion part of\neverything we do\" from their annual investor report. This action followed Meta, Amazon, Pepsi,\nMcDonald's, Walmart and others who all have rolled back their DEI programmes.[284]\n\nOffice locations\nGoogle's headquarters in Mountain View, California is\nreferred to as \"the Googleplex\", a play on words on the\nnumber googolplex and the headquarters itself being a\ncomplex of buildings. Internationally, Google has over 78\noffices in more than 50 countries.[285]"
+        ],
+        "compressed_context": [
+            "Google's headquarters is located in Mountain View, California.",
+            "Google's headquarters is located in Mountain View, California."
+        ],
+        "answer": "Mountain View, California.",
+        "context_recall": 0.6666666666666666,
+        "context_precision": 0.6666666666666666,
+        "faithfulness": 1.0,
+        "faithfulness_claims": [
+            {
+                "claim": "Mountain View, California",
+                "supported": true
+            }
+        ],
+        "answer_relevancy": 1.0,
+        "answer_relevancy_reason": "The answer directly answers the user's question.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What is the primary device used for both smartphones and wearable technology?",
+        "ground_truth": "Pixel",
+        "retrieved_context": [
+            "Software\nGoogle develops the Android mobile operating system,[185] as well as its smartwatch,[186] television,[187]\n\ncar,[188] and Internet of things-enabled smart devices variations.[189] It also develops the Google Chrome\nweb browser,[190] and ChromeOS, an operating system based on Chrome.[191]",
+            "year.[68][69] It used a new user interface design language, codenamed \"Metro\", which prominently used\nsimple shapes, typography, and iconography, utilizing the concept of minimalism. Microsoft implemented\na new strategy for the software industry, providing a consistent user experience across all smartphones",
+            "smartphones (Pixel), wearable technology (Pixel Area served Worldwide\n\nWatch and Fitbit), music streaming (YouTube Music), Key people Sundar Pichai (CEO)\nvideo on demand (YouTube TV), AI (Google Assistant"
+        ],
+        "compressed_context": [
+            "Google develops the Android mobile operating system, as well as its smartwatch.",
+            "smartphones (Pixel), wearable technology (Pixel Area served Worldwide Watch and Fitbit),"
+        ],
+        "answer": "I don't know.",
+        "context_recall": 1.0,
+        "context_precision": 0.0,
+        "faithfulness": 0.0,
+        "faithfulness_claims": [
+            {
+                "claim": "Google develops the Android mobile operating system",
+                "supported": false
+            },
+            {
+                "claim": "Google develops the smartwatch",
+                "supported": false
+            },
+            {
+                "claim": "Google develops the Pixel smartphone",
+                "supported": false
+            },
+            {
+                "claim": "Google develops the Pixel Area served Worldwide Watch",
+                "supported": false
+            },
+            {
+                "claim": "Google develops the Fitbit",
+                "supported": false
+            }
+        ],
+        "answer_relevancy": 0.0,
+        "answer_relevancy_reason": "The answer does not provide any information that addresses the user's question, as it is an acknowledgement of not knowing the answer.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What is the name of the CEO of Google Cloud",
+        "ground_truth": "Thomas Kurian",
+        "retrieved_context": [
+            "largest subsidiary and is a holding company for Company type Subsidiary\nAlphabet's internet properties and interests. Sundar Traded as Nasdaq: GOOGL\nPichai was appointed CEO of Google on October 24, Nasdaq: GOOG\n2015, replacing Larry Page, who became the CEO of\n\nIndustry\nAlphabet. On December 3, 2019, Pichai also became Internet\n\nthe CEO of Alphabet.[14] Cloud computing\nComputer software",
+            "Additionally, in 2001 Google's investors felt the need to have a strong\ninternal management, and they agreed to hire Eric Schmidt as the\nchairman and CEO of Google.[49] Eric was proposed by John Doerr\nfrom Kleiner Perkins. He had been trying to find a CEO that Sergey Google's first production\n\nserver[60]\nand Larry would accept for several months, but they rejected several\ncandidates because they wanted to retain control over the company.",
+            "Additionally, in 2001 Google's investors felt the need to have a strong\ninternal management, and they agreed to hire Eric Schmidt as the\nchairman and CEO of Google.[49] Eric was proposed by John Doerr\nfrom Kleiner Perkins. He had been trying to find a CEO that Sergey Google's first production"
+        ],
+        "compressed_context": [
+            "Sundar Pichai",
+            "[]",
+            "[]"
+        ],
+        "answer": "I don't know.",
+        "context_recall": 0.0,
+        "context_precision": 0.0,
+        "faithfulness": 0.0,
+        "faithfulness_claims": [],
+        "answer_relevancy": 0.0,
+        "answer_relevancy_reason": "Invalid evaluator response.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What is one of the non-Android ventures of Google?",
+        "ground_truth": "Nest",
+        "retrieved_context": [
+            "﻿Google\nGoogle LLC (/ˈɡuːɡəl/ ⓘ , GOO-gəl) is an Google LLC\nAmerican multinational corporation and technology\ncompany focusing on online advertising, search engine\ntechnology, cloud computing, computer software,\nquantum computing, e-commerce, consumer\nelectronics, and artificial intelligence (AI).[9] It has\nbeen referred to as \"the most powerful company in the The Google logo used since 2015",
+            "include gaming (Stadia),[15] Glass, Google+, Reader, Google Cloud)\nPlay Music, Nexus, Hangouts, and Inbox by Products Google Search\nGmail.[16][17] Google's other ventures outside of Android\ninternet services and consumer electronics include Nest\nquantum computing (Sycamore), self-driving cars",
+            "world\" by the BBC[10] and is one of the world's most\nvaluable brands.[11][12][13] Google's parent company,\nAlphabet Inc., is one of the five Big Tech companies\nalongside Amazon, Apple, Meta, and Microsoft."
+        ],
+        "compressed_context": [
+            "Google LLC is an American multinational corporation and technology company.",
+            "Google's other ventures outside of Android include:\n\n- internet services\n- consumer electronics\n- Nest\n- quantum computing (Sycamore)\n- self-driving cars",
+            "Alphabet Inc. is Google's parent company."
+        ],
+        "answer": "One of Google's non-Android ventures is Nest.",
+        "context_recall": 1.0,
+        "context_precision": 0.3333333333333333,
+        "faithfulness": 1.0,
+        "faithfulness_claims": [
+            {
+                "claim": "One of Google's non-Android ventures is Nest.",
+                "supported": true
+            }
+        ],
+        "answer_relevancy": 0.0,
+        "answer_relevancy_reason": "Invalid evaluator response.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What are some of the organizations that have contributed to the development of transformer models?",
+        "ground_truth": "[\"Waymo\", \"smart cities (Sidewalk Labs)\", \"Google DeepMind\"]",
+        "retrieved_context": [
+            "are about the past issues that have been resolved\".[59] 2007 also saw the creation of a multi-core unit at\nMicrosoft, following the steps of server companies such as Sun and IBM.[60]",
+            "Act Agreements for developing new capabilities, NASA paid\nSpaceX $396  million to develop the cargo configuration of\nthe Dragon spacecraft, while SpaceX developed the Falcon 9\nlaunch vehicle with their resources.[253] These Space Act\nAgreements have been shown to have saved NASA millions\nof dollars in development costs, making rocket development The COTS 2 Dragon is berthed to the",
+            "of vehicles.\"[158] This is because some jurisdictions, particularly in the United States, prohibit auto manufacturers from\ndirectly selling vehicles to consumers. Dealership associations have filed lawsuits to prevent direct sales. These\nassociations argued that the franchise system protects consumers by encouraging dealers to compete, lowering the price a"
+        ],
+        "compressed_context": [
+            "[]",
+            "[]"
+        ],
+        "answer": "I don't know.",
+        "context_recall": 0.0,
+        "context_precision": 0.0,
+        "faithfulness": 0.0,
+        "faithfulness_claims": [],
+        "answer_relevancy": 0.0,
+        "answer_relevancy_reason": "The answer does not directly address the user's question, as it does not provide any information about the organizations that have contributed to the development of transformer models.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What is the name of Twitter after it was rebranded?",
+        "ground_truth": "X",
+        "retrieved_context": [],
+        "compressed_context": [],
+        "answer": "I don't know.",
+        "context_recall": 0.0,
+        "context_precision": 0.0,
+        "faithfulness": 0.0,
+        "faithfulness_claims": [],
+        "answer_relevancy": 0.0,
+        "answer_relevancy_reason": "The answer does not answer the question because the question asks for the name of Twitter after it was rebranded, but the answer says 'I don't know' without providing any information about the rebranding.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What is the name of the company that provides photo and cloud storage services?",
+        "ground_truth": "Parent Alphabet Inc.",
+        "retrieved_context": [
+            "photo and cloud storage provider, mobile operating employees\nsystem, web browser, machine learning framework, Parent Alphabet Inc.\nand AI virtual assistant provider in the world as\nmeasured by market share.[19] On the list of most Subsidiaries Adscape",
+            "Fitbit\nGoogle Search and YouTube are the two most-visited Waze\nwebsites worldwide, followed by Facebook and YouTube\nTwitter (now known as X). Google is also the largest Gemini\nsearch engine, mapping and navigation application, Full list\nemail provider, office suite, online video platform, Number of 53,861 (2012) \nphoto and cloud storage provider, mobile operating employees",
+            "Sergey Brin\nsystems (Android and ChromeOS), cloud storage\n(Drive), language translation (Translate), photo storage Headquarters Googleplex, Mountain View,\n\n(Photos), videotelephony (Meet), smart home (Nest), California, U.S.\n\nsmartphones (Pixel), wearable technology (Pixel Area served Worldwide"
+        ],
+        "compressed_context": [
+            "Parent Alphabet Inc.",
+            "Fitbit",
+            "Google"
+        ],
+        "answer": "I don't know.",
+        "context_recall": 1.0,
+        "context_precision": 0.3333333333333333,
+        "faithfulness": 0.0,
+        "faithfulness_claims": [
+            {
+                "claim": "Parent Alphabet Inc. is a company",
+                "supported": false
+            },
+            {
+                "claim": "Fitbit is a company",
+                "supported": false
+            },
+            {
+                "claim": "Google is a company",
+                "supported": false
+            }
+        ],
+        "answer_relevancy": 0.0,
+        "answer_relevancy_reason": "The answer does not directly address the user's question, as it does not provide any information about the company that provides photo and cloud storage services.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What was the year when Google began as a research project?",
+        "ground_truth": "1996",
+        "retrieved_context": [
+            "ImageAmerica\nKaltix\nNest Labs\n\nHistory reCAPTCHA\nYouTube\nZipDash\n\nEarly years\nASN 15169 (https://bgp.tools/as/1\n\n5169)\n\nWebsite about.google (https://about.\ngoogle/)\n\nFootnotes / references\n[5][6][7][8]\n\nGoogle began in January 1996 as a research project by Larry\nPage and Sergey Brin while they were both PhD students at",
+            "Larry Page and Sergey Brin in 2003 Stanford University in California, USA.[23][24][25] The project\ninitially involved an unofficial \"third founder\", Scott Hassan,\nthe original lead programmer who wrote much of the code for\n\nthe original Google Search engine, but he left before Google was officially founded as a company;[26][27]",
+            "the importance of those pages that linked back to the original\nsite.[32][31] Page told his ideas to Hassan, who began writing\nthe code to implement Page's ideas.[26] Page and Brin would\nalso use their friend Susan Wojcicki's garage as their office\nwhen the search engine was set up in 1998.[33]"
+        ],
+        "compressed_context": [
+            "Google began in January 1996 as a research project by Larry Page and Sergey Brin while they were both PhD students at.",
+            "Larry Page and Sergey Brin began a research project at Stanford University in California, USA in 2003.",
+            "[]"
+        ],
+        "answer": "1996",
+        "context_recall": 1.0,
+        "context_precision": 0.3333333333333333,
+        "faithfulness": 0.0,
+        "faithfulness_claims": [
+            {
+                "claim": "1996",
+                "supported": false
+            }
+        ],
+        "answer_relevancy": 1.0,
+        "answer_relevancy_reason": "The answer directly addresses the user's question about the year when Google began as a research project.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "Who was the original lead programmer for the Google Search engine?",
+        "ground_truth": "Scott Hassan",
+        "retrieved_context": [
+            "Larry Page and Sergey Brin in 2003 Stanford University in California, USA.[23][24][25] The project\ninitially involved an unofficial \"third founder\", Scott Hassan,\nthe original lead programmer who wrote much of the code for\n\nthe original Google Search engine, but he left before Google was officially founded as a company;[26][27]\n\nHassan went on to pursue a career in robotics and founded the company Willow Garage in 2006.[28][29]",
+            "Larry Page and Sergey Brin in 2003 Stanford University in California, USA.[23][24][25] The project\ninitially involved an unofficial \"third founder\", Scott Hassan,\nthe original lead programmer who wrote much of the code for\n\nthe original Google Search engine, but he left before Google was officially founded as a company;[26][27]",
+            "While conventional search engines ranked results by counting\nhow many times the search terms appeared on the page, they\ntheorized about a better system that analyzed the relationships\namong websites.[31] They called this algorithm PageRank; it\ndetermined a website's relevance by the number of pages, and\nthe importance of those pages that linked back to the original\nsite.[32][31] Page told his ideas to Hassan, who began writing\nthe code to implement Page's ideas.[26] Page and Brin would\nalso use their friend Susan Wojcicki's garage as their office\nwhen the search engine was set up in 1998.[33]\n\nThen Chairman and CEO Eric Schmidt\n\nPage and Brin originally nicknamed the new search engine (left) with co-founders Sergey Brin\n(center) and Larry Page (right) in 2008"
+        ],
+        "compressed_context": [
+            "Larry Page and Sergey Brin in 2003 Stanford University in California, USA.[23][24][25]\nThe project initially involved an unofficial \"third founder\", Scott Hassan,[26][27]\nScott Hassan, the original lead programmer who wrote much of the code for the original Google Search engine,[26][27]\nhe left before Google was officially founded as a company;[26][27]\nHassan went on to pursue a career in robotics and founded the company Willow Garage in 2006.[28][29]",
+            "Larry Page and Sergey Brin in 2003 Stanford University in California, USA.[23][24][25]\nScott Hassan, the original lead programmer who wrote much of the code for the original Google Search engine.",
+            "[]"
+        ],
+        "answer": "Scott Hassan.",
+        "context_recall": 1.0,
+        "context_precision": 0.6666666666666666,
+        "faithfulness": 1.0,
+        "faithfulness_claims": [
+            {
+                "claim": "Scott Hassan was the original lead programmer who wrote much of the code for the original Google Search engine.",
+                "supported": true
+            },
+            {
+                "claim": "Scott Hassan went on to pursue a career in robotics and founded the company Willow Garage in 2006.",
+                "supported": true
+            }
+        ],
+        "answer_relevancy": 0.0,
+        "answer_relevancy_reason": "The answer does not directly address the user's question as it does not confirm if Scott Hassan was the original lead programmer for the Google Search engine.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What year did Hassan found the company Willow Garage?",
+        "ground_truth": "2006",
+        "retrieved_context": [
+            "Hassan went on to pursue a career in robotics and founded the company Willow Garage in 2006.[28][29]",
+            "28. \"Willow Garage Founder Scott Hassan Aims To Build A Startup Village\" (https://spectrum.iee\ne.org/willow-garage-founder-scott-hassan-aims-to-build-a-startup-village). IEEE Spectrum.\nSeptember 5, 2014. Archived (https://web.archive.org/web/20190824075356/https://spectru\nm.ieee.org/view-from-the-valley/at-work/start-ups/willow-garage-founder-scott-hassan-aims-\nto-build-a-startup-village) from the original on August 24, 2019. Retrieved September 1,\n2019.",
+            "28. \"Willow Garage Founder Scott Hassan Aims To Build A Startup Village\" (https://spectrum.iee\ne.org/willow-garage-founder-scott-hassan-aims-to-build-a-startup-village). IEEE Spectrum.\nSeptember 5, 2014. Archived (https://web.archive.org/web/20190824075356/https://spectru\nm.ieee.org/view-from-the-valley/at-work/start-ups/willow-garage-founder-scott-hassan-aims-"
+        ],
+        "compressed_context": [
+            "Hassan founded the company Willow Garage in 2006.",
+            "\"Scott Hassan founded Willow Garage in 2006.\"",
+            "\"Scott Hassan founded Willow Garage.\""
+        ],
+        "answer": "2006.",
+        "context_recall": 1.0,
+        "context_precision": 0.0,
+        "faithfulness": 0.3333333333333333,
+        "faithfulness_claims": [
+            {
+                "claim": "Scott Hassan founded Willow Garage in 2006",
+                "supported": false
+            },
+            {
+                "claim": "Scott Hassan founded Willow Garage",
+                "supported": false
+            },
+            {
+                "claim": "2006",
+                "supported": true
+            }
+        ],
+        "answer_relevancy": 1.0,
+        "answer_relevancy_reason": "The answer directly addresses the user's question by providing the year Hassan founded the company Willow Garage.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "What is the basis for determining a website's relevance in the PageRank algorithm?",
+        "ground_truth": "the number of pages that link back to it",
+        "retrieved_context": [
+            "While conventional search engines ranked results by counting\nhow many times the search terms appeared on the page, they\ntheorized about a better system that analyzed the relationships\namong websites.[31] They called this algorithm PageRank; it\ndetermined a website's relevance by the number of pages, and\nthe importance of those pages that linked back to the original",
+            "\"BackRub\" because the system checked backlinks to estimate\nthe importance of a site.[23][34][35] Hassan, as well as\nAlan Steremberg were cited by Page and Brin as being\ncritical to the development of Google. Rajeev Motwani\nand Terry Winograd later co-authored with Page and\nBrin the first paper about the project, describing\nPageRank and the initial prototype of the Google",
+            "Robin Li in 1996, with Larry Page's PageRank patent experience in HTML, the markup language used\nfor designing web pages[30]\n\nincluding a citation to Li's earlier RankDex patent; Li\nlater went on to create the Chinese search engine\nBaidu.[37][38]"
+        ],
+        "compressed_context": [
+            "A website's relevance is determined by the number of pages that link back to it.",
+            "\"the system checked backlinks to estimate the importance of a site\"",
+            "[]"
+        ],
+        "answer": "I don't know.",
+        "context_recall": 1.0,
+        "context_precision": 1.0,
+        "faithfulness": 1.0,
+        "faithfulness_claims": [
+            {
+                "claim": "the system checked backlinks to estimate the importance of a site",
+                "supported": true
+            }
+        ],
+        "answer_relevancy": 0.0,
+        "answer_relevancy_reason": "The answer does not address the user's question about the basis for determining a website's relevance in the PageRank algorithm.",
+        "source": "docs\\Google.txt"
+    },
+    {
+        "question": "Where did Page and Brin initially set up their office for the search engine?",
+        "ground_truth": "Susan Wojcicki's garage",
+        "retrieved_context": [
+            "Larry Page and Sergey Brin in 2003 Stanford University in California, USA.[23][24][25] The project\ninitially involved an unofficial \"third founder\", Scott Hassan,\nthe original lead programmer who wrote much of the code for\n\nthe original Google Search engine, but he left before Google was officially founded as a company;[26][27]",
+            "the importance of those pages that linked back to the original\nsite.[32][31] Page told his ideas to Hassan, who began writing\nthe code to implement Page's ideas.[26] Page and Brin would\nalso use their friend Susan Wojcicki's garage as their office\nwhen the search engine was set up in 1998.[33]",
+            "While conventional search engines ranked results by counting\nhow many times the search terms appeared on the page, they\ntheorized about a better system that analyzed the relationships\namong websites.[31] They called this algorithm PageRank; it\ndetermined a website's relevance by the number of pages, and\nthe importance of those pages that linked back to the original\nsite.[32][31] Page told his ideas to Hassan, who began writing\nthe code to implement Page's ideas.[26] Page and Brin would\nalso use their friend Susan Wojcicki's garage as their office\nwhen the search engine was set up in 1998.[33]\n\nThen Chairman and CEO Eric Schmidt\n\nPage and Brin originally nicknamed the new search engine (left) with co-founders Sergey Brin\n(center) and Larry Page (right) in 2008"
+        ],
+        "compressed_context": [
+            "Larry Page and Sergey Brin initially set up their office for the search engine at Stanford University in California, USA.",
+            "Page and Brin initially set up their office for the search engine in Susan Wojcicki's garage.",
+            "Page and Brin initially set up their office for the search engine in Susan Wojcicki's garage."
+        ],
+        "answer": "Page and Brin initially set up their office for the search engine in Susan Wojcicki's garage.",
+        "context_recall": 1.0,
+        "context_precision": 0.6666666666666666,
+        "faithfulness": 0.5,
+        "faithfulness_claims": [
+            {
+                "claim": "Page and Brin initially set up their office for the search engine in Susan Wojcicki's garage.",
+                "supported": true
+            },
+            {
+                "claim": "Page and Brin initially set up their office for the search engine at Stanford University in California, USA.",
+                "supported": false
+            }
+        ],
+        "answer_relevancy": 1.0,
+        "answer_relevancy_reason": "The answer directly addresses the user's question about where Page and Brin initially set up their office for the search engine.",
+        "source": "docs\\Google.txt"
+    }
+]

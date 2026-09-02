@@ -1,0 +1,22 @@
+question,ground_truth,answer,context_recall,context_precision,faithfulness,answer_relevancy,source
+What is the primary focus of Google LLC?,online advertising,"The primary focus of Google LLC is not explicitly stated in the provided context. However, based on the information provided, it can be inferred that Google LLC focuses on a range of areas, including online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, consumer electronics, and artificial intelligence (AI).
+
+A more accurate answer would be: ""I don't know"" as the context does not explicitly state the primary focus of Google LLC.",1.0,0.6666666666666666,0.3333333333333333,0.0,docs\Google.txt
+Which of the five Big Tech companies is Google's parent company?,Alphabet Inc.,Alphabet Inc.,1.0,0.6666666666666666,1.0,1.0,docs\Google.txt
+What percentage of publicly listed shares does Larry Page and Sergey Brin own together?,14%,Larry Page and Sergey Brin own 14% of Google's publicly listed shares together.,1.0,0.3333333333333333,0.0,0.0,docs\Google.txt
+What was the name of Google before it became a subsidiary of Alphabet Inc.,Formerly Google Inc.,I don't know.,0.6666666666666666,0.6666666666666666,0.0,0.0,docs\Google.txt
+What is Sundar Pichai's role in Google?,CEO,Sundar Pichai is the CEO of Google.,1.0,0.6666666666666666,0.5,0.0,docs\Google.txt
+When was Google founded?,"September 4, 1998",I don't know.,1.0,0.3333333333333333,0.0,0.0,docs\Google.txt
+What type of service is YouTube?,video sharing,YouTube is a video-sharing service.,1.0,0.3333333333333333,1.0,1.0,docs\Google.txt
+Where is the headquarters of Google located?,"Googleplex, Mountain View,","Mountain View, California.",0.6666666666666666,0.6666666666666666,1.0,1.0,docs\Google.txt
+What is the primary device used for both smartphones and wearable technology?,Pixel,I don't know.,1.0,0.0,0.0,0.0,docs\Google.txt
+What is the name of the CEO of Google Cloud,Thomas Kurian,I don't know.,0.0,0.0,0.0,0.0,docs\Google.txt
+What is one of the non-Android ventures of Google?,Nest,One of Google's non-Android ventures is Nest.,1.0,0.3333333333333333,1.0,0.0,docs\Google.txt
+What are some of the organizations that have contributed to the development of transformer models?,"[""Waymo"", ""smart cities (Sidewalk Labs)"", ""Google DeepMind""]",I don't know.,0.0,0.0,0.0,0.0,docs\Google.txt
+What is the name of Twitter after it was rebranded?,X,I don't know.,0.0,0.0,0.0,0.0,docs\Google.txt
+What is the name of the company that provides photo and cloud storage services?,Parent Alphabet Inc.,I don't know.,1.0,0.3333333333333333,0.0,0.0,docs\Google.txt
+What was the year when Google began as a research project?,1996,1996,1.0,0.3333333333333333,0.0,1.0,docs\Google.txt
+Who was the original lead programmer for the Google Search engine?,Scott Hassan,Scott Hassan.,1.0,0.6666666666666666,1.0,0.0,docs\Google.txt
+What year did Hassan found the company Willow Garage?,2006,2006.,1.0,0.0,0.3333333333333333,1.0,docs\Google.txt
+What is the basis for determining a website's relevance in the PageRank algorithm?,the number of pages that link back to it,I don't know.,1.0,1.0,1.0,0.0,docs\Google.txt
+Where did Page and Brin initially set up their office for the search engine?,Susan Wojcicki's garage,Page and Brin initially set up their office for the search engine in Susan Wojcicki's garage.,1.0,0.6666666666666666,0.5,1.0,docs\Google.txt
