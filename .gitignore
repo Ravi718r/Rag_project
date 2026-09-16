@@ -9,9 +9,13 @@ __pycache__/
 # Environment variables / secrets
 .env
 .env.*
+!.env.example
 
 # Chroma / local vector database
 db/chroma_db/
+
+# Evaluation reports
+reports/
 
 # IDE
 .vscode/

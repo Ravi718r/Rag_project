@@ -74,31 +74,23 @@ def retrieve_documents(
         docs
     )
     
-    # print("\n===== BEFORE COMPRESSION =====")
     
-    # for doc in reranked_docs:
-    #     print("\n", doc.page_content)
-
     # =========================
     # Compression
     # =========================
-    compressed_docs = compress_documents(
-        query,
-        reranked_docs
-    )
+    # compressed_docs = compress_documents(
+    #     query,
+    #     reranked_docs
+    # )
 
     
-    # print("\n===== AFTER COMPRESSION =====")
-    
-    # for doc in compressed_docs:
-    #     print("\n", doc.page_content)
 
-    if not compressed_docs:
-        return None
+    # if not compressed_docs:
+    #     return None
         
     return {
         "reranked_docs": reranked_docs,
-        "compressed_docs": compressed_docs
+        "compressed_docs": rerank_documents
     } 
 
 

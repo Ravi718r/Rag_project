@@ -27,7 +27,7 @@ def run_rag(
         }
 
     reranked_docs = result["reranked_docs"]
-    compressed_docs = result["compressed_docs"]
+    compressed_docs = result["reranked_docs"]
 
     # =========================
     # Context

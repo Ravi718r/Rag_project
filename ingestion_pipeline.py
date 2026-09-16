@@ -6,7 +6,7 @@ from langchain_chroma import Chroma
 from dotenv import load_dotenv
 from langchain_huggingface import HuggingFaceEmbeddings
 
-
+from config import EMBEDDING_MODEL, PERSIST_DIRECTORY
 
 
 load_dotenv()
@@ -83,12 +83,12 @@ def split_documents(documents, chunk_size=400, chunk_overlap=80):
     return chunks
 
 
-def create_vector_store(chunks, persist_directory="db/chroma_db"):
+def create_vector_store(chunks, persist_directory=PERSIST_DIRECTORY):
     """Create and persist ChromaDb vector store"""
     print("Creating embedding and storing in ChromaDB...")
 
     embedding_model = HuggingFaceEmbeddings(
-        model_name="sentence-transformers/all-MiniLM-L6-v2"
+        model_name=EMBEDDING_MODEL
     )
 
     # Create ChromaDB vectore store

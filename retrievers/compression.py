@@ -2,9 +2,10 @@ from langchain_ollama import ChatOllama
 
 from config import MODEL_NAME, COMPRESSION_PROMPT
 
+import time
 
 compression_llm = ChatOllama(
-    model=MODEL_NAME,
+    model="qwen3:4b",
     temperature=0
 )
 
@@ -16,6 +17,12 @@ def compress_document(
     query,
     document
 ):
+
+    start = time.perf_counter()
+
+    print(
+        f"\nCompressing document..."
+    )
     """
     Extract only the parts of a document
     relevant to the query.
@@ -31,6 +38,11 @@ def compress_document(
     )
 
     content = response.content.strip()
+
+    print(
+        f"Compression completed in "
+        f"{time.perf_counter() - start:.2f}s"
+    )
 
     if content.upper() == "EMPTY":
         return ""

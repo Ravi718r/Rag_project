@@ -12,6 +12,14 @@ from ragas.metrics import (
     ContextRecall
 )
 
+from ragas.run_config import RunConfig
+
+
+from ragas.embeddings.base import LangchainEmbeddingsWrapper
+
+from langchain_ollama import ChatOllama
+from ragas.llms.base import LangchainLLMWrapper
+
 
 # ============================================================
 # Convert our evaluation results -> RAGAS EvaluationDataset
@@ -103,8 +111,14 @@ def create_ragas_dataset(evaluation_results):
 # ============================================================
 
 def run_ragas_evaluation(
-    evaluation_results
+    evaluation_results,
+    embedding_model
 ):
+
+    run_config = RunConfig(
+            max_workers=2,
+            timeout=120
+        )
 
     # --------------------------------------------------------
     # Create dataset
@@ -112,6 +126,25 @@ def run_ragas_evaluation(
 
     dataset = create_ragas_dataset(
         evaluation_results
+    )
+
+    evaluator_model = ChatOllama(
+    model="llama3.2:3b",
+    temperature=0
+)
+
+    evaluator_llm = LangchainLLMWrapper(
+        evaluator_model,
+        run_config= run_config
+    )
+
+    # =========================
+    # Existing HuggingFace embeddings
+    # =========================
+
+    evaluator_embeddings = LangchainEmbeddingsWrapper(
+        embedding_model,
+        run_config=run_config
     )
 
     print(
@@ -146,7 +179,10 @@ def run_ragas_evaluation(
             ContextPrecision(),
 
             ContextRecall()
-        ]
+        ],
+
+        llm = evaluator_llm,
+        embeddings=evaluator_embeddings
     )
 
     return result

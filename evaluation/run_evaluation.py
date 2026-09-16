@@ -1,4 +1,5 @@
 import json
+import sys
 
 from evaluation.evaluator import (
     context_recall,
@@ -7,9 +8,12 @@ from evaluation.evaluator import (
     answer_relevancy
 )
 
-from evaluation.ragas_evaluator import (
-    run_ragas_evaluation
-)
+
+from evaluation.evaluation_gate import EvaluationGate
+
+# from evaluation.ragas_evaluator import (
+#     run_ragas_evaluation
+# )
 
 from rag_pipeline import run_rag
 from rag_setup import initialize_rag
@@ -22,6 +26,19 @@ from evaluation.reporter import (
     save_csv_report,
     print_report
 )
+
+def format_score(score):
+    """
+    Safely format an evaluation score.
+
+    None means the evaluator failed to produce
+    a valid score.
+    """
+
+    if score is None:
+        return "N/A"
+
+    return f"{score:.2f}"
 
 # =========================
 # Load Synthetic Dataset
@@ -49,11 +66,13 @@ def evaluate(
     bm25,
     documents,
     generation_chain,
+    embedding_model,
     evaluation_dataset
 ):
 
     results = []
 
+    
     # =====================================
     # STEP 1: Run RAG on every question
     # =====================================
@@ -87,6 +106,8 @@ def evaluate(
             generation_chain,
             question
         )
+
+        
 
         # -------------------------
         # Context Recall
@@ -173,57 +194,40 @@ def evaluate(
     # STEP 2: All RAG results collected
     # =====================================
 
-    print(
-        "\n"
-        + "=" * 70
-    )
-
-    print(
-        "RAG EVALUATION DATA COLLECTED"
-    )
-
-    print(
-        "=" * 70
-    )
-
-    print(
-        f"Evaluation results: {len(results)}"
-    )
+    print("\n" + "=" * 70)
+    print("RAG EVALUATION DATA COLLECTED")
+    print("=" * 70)
+    print(f"Evaluation results: {len(results)}")
 
     # =====================================
     # STEP 3: Run RAGAS ONCE
     # =====================================
 
-    print(
-        "\n"
-        + "=" * 70
-    )
+    # print("\n" + "=" * 70)
 
-    print(
-        "RAGAS EVALUATION"
-    )
+    # print("RAGAS EVALUATION")
 
-    print(
-        "=" * 70
-    )
+    # print("=" * 70)
 
-    ragas_results = run_ragas_evaluation(
-        results
-    )
+    # ragas_results = run_ragas_evaluation(
+    #     results,
+    #     embedding_model
+    # )
 
-    print(
-        "\nRAGAS evaluation completed."
-    )
+    # print(
+    #     "\nRAGAS evaluation completed."
+    # )
 
-    print(
-        ragas_results
-    )
+    # print(
+    #     ragas_results
+    # )
 
     # =====================================
     # Return both results
     # =====================================
 
-    return results, ragas_results
+    return results
+# ragas_results
 
 
 # =========================
@@ -254,14 +258,16 @@ if __name__ == "__main__":
         vectorstore,
         bm25,
         documents,
-        generation_chain
+        generation_chain,
+        embedding_model
     ) = initialize_rag()
 
     # -------------------------
     # Run Evaluation
     # -------------------------
 
-    results, ragas_results = evaluate(
+    # results, ragas_results = evaluate(
+    results = evaluate(
 
         vectorstore,
 
@@ -271,6 +277,8 @@ if __name__ == "__main__":
 
         generation_chain,
 
+        embedding_model,
+
         evaluation_dataset
     )
 
@@ -278,55 +286,42 @@ if __name__ == "__main__":
     # Print Local Evaluation Results
     # =====================================
 
-    print(
-        "\n"
-        + "=" * 70
-    )
-
-    print(
-        "RAG EVALUATION RESULTS"
-    )
-
-    print(
-        "=" * 70
-    )
+    print("\n"+ "=" * 70)
+    print("RAG EVALUATION RESULTS")
+    print("=" * 70)
 
     for result in results:
 
+        print("\nQuestion:")
+
+        print(result["question"])
+
         print(
-            "\nQuestion:"
+            f"\nContext Recall: "+
+            format_score(result["context_recall"])
         )
 
         print(
-            result["question"]
+            f"Context Precision: " +
+            format_score(result["context_precision"])
         )
 
         print(
-            f"\nContext Recall: "
-            f"{result['context_recall']:.2f}"
+            format_score(result["faithfulness"])
         )
 
-        print(
-            f"Context Precision: "
-            f"{result['context_precision']:.2f}"
-        )
-
-        print(
-            f"Faithfulness: "
-            f"{result['faithfulness']:.2f}"
-        )
+        # print(
+        #     f"Faithfulness: "
+        #     f"{result['faithfulness']:.2f}"
+        # )
 
         # -------------------------
         # Faithfulness Claims
         # -------------------------
 
-        print(
-            "\nFaithfulness Claims:"
-        )
+        print("\nFaithfulness Claims:")
 
-        for claim in result[
-            "faithfulness_claims"
-        ]:
+        for claim in result["faithfulness_claims"]:
 
             status = (
                 "SUPPORTED"
@@ -343,9 +338,14 @@ if __name__ == "__main__":
         # Answer Relevancy
         # -------------------------
 
+        # print(
+        #     f"\nAnswer Relevancy: "
+        #     f"{result['answer_relevancy']:.2f}"
+        # )
+
         print(
-            f"\nAnswer Relevancy: "
-            f"{result['answer_relevancy']:.2f}"
+            "answer relevancy" +
+            format_score(result["answer_relevancy"])
         )
 
         print(
@@ -361,48 +361,31 @@ if __name__ == "__main__":
             "\nGround Truth:"
         )
 
-        print(
-            result["ground_truth"]
-        )
+        print(result["ground_truth"])
 
         # -------------------------
         # Answer
         # -------------------------
 
-        print(
-            "\nAnswer:"
-        )
+        print("\nAnswer:")
 
-        print(
-            result["answer"]
-        )
+        print(result["answer"])
 
-        print(
-            "-" * 70
-        )
+        print("-" * 70)
 
     # =====================================
     # Print RAGAS Results
     # =====================================
 
-    print(
-        "\n"
-        + "=" * 70
-    )
+    # print("\n"+ "=" * 70)
 
-    print(
-        "RAGAS FINAL RESULTS"
-    )
+    # print("RAGAS FINAL RESULTS")
 
-    print(
-        "=" * 70
-    )
+    # print("=" * 70)
 
-    print(
-        ragas_results
-    )
+    # print(ragas_results)
 
-     # ========================================================
+    # ========================================================
     # Build Evaluation Summary
     # ========================================================
 
@@ -410,13 +393,65 @@ if __name__ == "__main__":
         results
     )
 
+
     # ========================================================
     # Find Failure Cases
     # ========================================================
-
+    
     failures = find_failures(
         results
     )
+
+    # ========================================================
+    # Evaluation Gate
+    # ========================================================
+
+    gate = EvaluationGate(
+        min_context_recall=0.80,
+        min_context_precision=0.70,
+        min_faithfulness=0.80,
+        min_answer_relevancy=0.80
+    )
+
+    gate_result = gate.check(summary)
+
+    print("\n" + "=" * 70)
+    print("EVALUATION GATE")
+    print("=" * 70)
+
+    if gate_result["passed"]:
+
+        print("STATUS: PASS")
+        print("All quality thresholds passed.")
+
+    else:
+
+        print("STATUS: FAIL")
+        print("Quality thresholds failed.")
+
+        print("\nFailures:")
+
+        for failure in gate_result["failures"]:
+
+            actual = failure["actual"]
+
+            if actual is None:
+
+                print(
+                    f"- {failure['metric']}: "
+                    f"MISSING "
+                    f"(required >= {failure['required']:.2f})"
+                )
+
+            else:
+
+                print(
+                    f"- {failure['metric']}: "
+                    f"{actual:.2f} "
+                    f"(required >= {failure['required']:.2f})"
+                )
+
+    
 
     # ========================================================
     # Save Reports
@@ -449,9 +484,7 @@ if __name__ == "__main__":
     # Report Locations
     # ========================================================
 
-    print(
-        "\nReports generated:"
-    )
+    print("\nReports generated:")
 
     print(
         f"Full JSON: "
@@ -467,3 +500,19 @@ if __name__ == "__main__":
         f"CSV:       "
         f"{csv_path}"
     )
+
+    if not gate_result["passed"]:
+
+        print(
+            "\nEvaluation gate failed. "
+            "Deployment should be blocked."
+        )
+
+        sys.exit(1)
+
+    print(
+        "\nEvaluation gate passed. "
+        "RAG system is ready for the next stage."
+    )
+
+    sys.exit(0)

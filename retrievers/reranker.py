@@ -1,6 +1,6 @@
 from sentence_transformers import CrossEncoder
 
-from config import FINAL_K
+from config import FINAL_K, RERANK_THRESHOLD
 
 
 # ============================
@@ -23,6 +23,9 @@ def rerank_documents(
     using a Cross Encoder.
     """
 
+    if not documents:
+        return []
+
     pairs = [
         (
             query,
@@ -35,32 +38,41 @@ def rerank_documents(
         pairs
     )
 
-    # print("\n===== Cross Encoder Scores =====")
 
-    # for doc, score in zip(documents, scores):
-    #     print(f"\nScore : {score:.4f}")
-    #     print(doc.page_content[:150])
-
-    doc_scores = list(
+    doc_scores = sorted(
         zip(
             documents,
             scores
-        )
-    )
-
-    doc_scores = sorted(
-        doc_scores,
+        ),
         key=lambda x: x[1],
         reverse=True
     )
 
-    # print("\n===== After Re-ranking =====")
-
-    # for doc, score in doc_scores:
-    #     print(f"\nScore : {score:.4f}")
-    #     print(doc.page_content[:150])
-
-    return [
+    filtered_docs = [
         doc
-        for doc, score in doc_scores[:FINAL_K]
+        for doc, score in doc_scores
+        if score >= RERANK_THRESHOLD
     ]
+
+    
+    # # ============================
+    # # DEBUG
+    # # ============================
+
+    # print("\n===== CROSS ENCODER SCORES =====")
+
+    # for rank, (doc, score) in enumerate(
+    #     doc_scores,
+    #     start=1
+    # ):
+    #     print(
+    #         f"\nRank: {rank}"
+    #         f"\nScore: {score:.4f}"
+    #         f"\nContent: {doc.page_content[:200]}"
+    #     )
+
+    
+    # ============================
+    # Return Top K
+    # ============================
+    return filtered_docs[:FINAL_K]

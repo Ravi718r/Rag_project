@@ -43,5 +43,6 @@ def initialize_rag():
         vectorstore,
         bm25,
         documents,
-        generation_chain
-    )
+        generation_chain,
+        embedding_model
+    )  

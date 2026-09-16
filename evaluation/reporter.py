@@ -26,16 +26,30 @@ def safe_mean(values):
     missing/invalid values.
     """
 
-    valid_values = [
-        float(value)
+    values = [
+        value
         for value in values
-        if isinstance(value, (int, float))
+        if value is not None
     ]
 
-    if not valid_values:
+    if not values:
         return 0.0
 
-    return mean(valid_values)
+    return sum(values) / len(values)
+
+
+def format_score(value):
+    """
+    Format evaluation score safely.
+
+    None means the evaluator did not
+    produce a valid score.
+    """
+
+    if value is None:
+        return "N/A"
+
+    return f"{value:.2f}"
 
 
 # ============================================================
@@ -57,27 +71,36 @@ def build_summary(results):
             "failures": {}
         }
 
-    context_recall = {
+    context_recall = [
         result.get("context_recall")
         for result in results
-    }
+    ]
 
-    context_precision = {
+    context_precision = [
         result.get("context_precision")
         for result in results
-    }
+    ]
 
 
-    faithfulness = {
+    faithfulness = [
         result.get("faithfulness")
         for result in results
-    }
+    ]
 
 
-    answer_relevancy  = {
+    answer_relevancy  = [
         result.get("answer_relevancy")
         for result in results
-    }
+    ]
+
+    # --------------------------------------------------------
+    # Evaluation thresholds
+    # --------------------------------------------------------
+
+    RECALL_THRESHOLD = 0.5
+    PRECISION_THRESHOLD = 0.5
+    FAITHFULNESS_THRESHOLD = 0.5
+    RELEVANCY_THRESHOLD = 0.5
 
 
     # --------------------------------------------------------
@@ -90,40 +113,57 @@ def build_summary(results):
 
     for result in results:
 
-        recall = result.get(
-            "context_recall",
-            0
-        )
+        recall = result.get("context_recall")
 
-        precision = result.get(
-            "context_precision",
-            0
-        )
+        precision = result.get("context_precision")
 
-        faithful = result.get(
-            "faithfulness",
-            0
-        )
+        faithful = result.get("faithfulness")
 
-        relevancy = result.get(
-            "answer_relevancy",
-            0
-        )
+        relevancy = result.get("answer_relevancy")
 
-        if recall < 0.5:
+         # --------------------------------------------
+        # Retrieval failure
+        # --------------------------------------------
+
+        if (
+            recall is not None
+                and 
+            recall < RECALL_THRESHOLD
+            ):
             retrieval_failures += 1
 
-        if faithful < 0.5 or relevancy <0.5:
+        # --------------------------------------------
+        # Generation failure
+        # --------------------------------------------
+
+        if (
+            (
+                faithful is not None
+                    and
+                faithful < FAITHFULNESS_THRESHOLD
+            )
+            
+            or
+            (   
+                relevancy is not None
+                    and 
+                relevancy < RELEVANCY_THRESHOLD
+            )
+        ):
             generation_failures += 1
 
+        # --------------------------------------------
+        # Complete failure
+        # --------------------------------------------
 
-        if(
-            recall <0.5
-            and
-            precision < 0.5
-            and 
-            faithful <0.5
-        ): 
+        if (
+            recall is not None
+            and precision is not None
+            and faithful is not None
+            and recall < RECALL_THRESHOLD
+            and precision < PRECISION_THRESHOLD
+            and faithful < FAITHFULNESS_THRESHOLD
+        ):
             completely_failed += 1
 
     # --------------------------------------------------------
@@ -194,34 +234,27 @@ def find_failures(results):
             0
         )
 
-        faithful = result.get(
-            "faithfulness",
-            0
-        )
-
-        relevancy = result.get(
-            "answer_relevancy",
-            0
-        )
+        faithful = result.get("faithfulness")
+        relevancy = result.get("answer_relevancy")
 
         problems = []
 
-        if recall < 0.5:
+        if recall is not None and recall < 0.5:
             problems.append(
                 "low_context_recall"
             )
 
-        if precision < 0.5:
+        if precision is not None and precision < 0.5:
             problems.append(
                 "low_context_precision"
             )
 
-        if faithful < 0.5:
+        if faithful is not None and faithful < 0.5:
             problems.append(
                 "low_faithfulness"
             )
 
-        if relevancy < 0.5:
+        if relevancy is not None and relevancy < 0.5:
             problems.append(
                 "low_answer_relevancy"
             )
@@ -521,23 +554,31 @@ def print_report(summary, failures):
             )
 
             print(
-                f"Recall: "
-                f"{failure['context_recall']:.2f}"
+                f"Recall: " +
+                format_score(
+                    failure["context_recall"]
+                )
             )
 
             print(
-                f"Precision: "
-                f"{failure['context_precision']:.2f}"
+                f"Precision: "+
+                format_score(
+                    failure["context_precision"]
+                )
             )
 
             print(
-                f"Faithfulness: "
-                f"{failure['faithfulness']:.2f}"
+                f"Faithfulness: "+
+                format_score(
+                    failure["faithfulness"]
+                )
             )
 
             print(
-                f"Relevancy: "
-                f"{failure['answer_relevancy']:.2f}"
+                f"Relevancy: "+
+                format_score(
+                    failure["answer_relevancy"]
+                )
             )
 
     print("\n")
